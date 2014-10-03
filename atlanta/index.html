@@ -1,14 +1,22 @@
 ---
 layout: default
 title: MaptimeATL
+
+tags:
+ - maptimeatl
+
+css:
+ - atlanta.css
 ---
 
+<ul>
 {% for post in site.posts %}
-  {% if post.tag contains maptimeatl %}
-  <h2><a href='{{site.baseurl}}{{item.url}}'>{{item.title}}</a></h2>
-  {{item.content}}
-  <div class='pad1y keyline-top'>
-    <strong class='quiet small block space-bottom1'>Posted {{item.date | date:"%b %d %Y"}} {% if item.author %}by {{item.author}}{% endif %}</strong>
-  </div>
+  {% if post.tags contains 'maptimeatl' %}
+    <li>
+    <h2>{{ post.title }}</h2>
+    {{ post.content }}
+
+    </li>
   {% endif %}
 {% endfor %}
+</ul>
