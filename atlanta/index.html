@@ -1,0 +1,14 @@
+---
+layout: default
+title: MaptimeATL
+---
+
+{% for post in site.posts %}
+  {% if post.tag contains maptimeatl %}
+  <h2><a href='{{site.baseurl}}{{item.url}}'>{{item.title}}</a></h2>
+  {{item.content}}
+  <div class='pad1y keyline-top'>
+    <strong class='quiet small block space-bottom1'>Posted {{item.date | date:"%b %d %Y"}} {% if item.author %}by {{item.author}}{% endif %}</strong>
+  </div>
+  {% endif %}
+{% endfor %}
