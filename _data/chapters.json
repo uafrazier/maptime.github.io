@@ -76,7 +76,9 @@
                         "twitter": "r0yhewitt"
                     }
                 ],
-                "moreInfo": null,
+                "moreInfo": {
+                    "type": "website",
+                    "url": "http://maptime.github.io/atlanta"},
                 "comingSoon": true
             },
             "geometry": {
